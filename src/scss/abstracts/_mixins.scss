@@ -1,0 +1,58 @@
+// MIXINS
+
+// Set element margin
+// Usage: @include margin(top, right, bottom, left);
+// Arguments: top, right, bottom, left - margin values
+// Example: @include margin(10px, 20px, 30px, 40px);
+@mixin margins($top: false, $right: false, $bottom: false, $left: false) {
+  @if $top !=false {
+    --margin-top: #{$top};
+  }
+
+  @if $right !=false {
+    --margin-right: #{$right};
+  }
+
+  @if $bottom !=false {
+    --margin-bottom: #{$bottom};
+  }
+
+  @if $left !=false {
+    --margin-left: #{$left};
+  }
+
+  @if $top !=false {
+    margin-top: var(--margin-top);
+  }
+
+  @if $right !=false {
+    margin-right: var(--margin-right);
+  }
+
+  @if $bottom !=false {
+    margin-bottom: var(--margin-bottom);
+  }
+
+  @if $left !=false {
+    margin-left: var(--margin-left);
+  }
+}
+
+// Set element padding
+// Usage: @include padding(top, right, bottom, left);
+// Arguments: top, right, bottom, left - padding values
+// Example: @include padding(10px, 20px, 30px, 40px);
+// @mixin padding($top: 0, $right: 0, $bottom: 0, $left: 0) {
+//   --
+// }
+
+@mixin defaultPaddings() {
+  --padding-top: 0;
+  --padding-right: var(--spacing-base-1, 0);
+  --padding-bottom: 0;
+  --padding-left: var(--spacing-base-1, 0);
+  padding-top: var(--padding-top);
+  padding-right: var(--padding-right);
+  padding-bottom: var(--padding-bottom);
+  padding-left: var(--padding-left);
+}

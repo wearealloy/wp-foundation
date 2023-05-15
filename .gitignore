@@ -1,0 +1,35 @@
+# Application
+public_html/app/plugins/*
+!public_html/app/plugins/.gitkeep
+public_html/app/mu-plugins/*/
+public_html/app/themes/twentytwentythree/
+public_html/app/themes/foundation/dist
+public_html/app/upgrade
+public_html/app/uploads/*
+!public_html/app/uploads/.gitkeep
+public_html/app/cache/*
+
+
+# WordPress
+public_html/wp
+public_html/.htaccess
+
+# Node
+node_modules
+
+# Logs
+*.log
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+/vendor
+
+# WP-CLI
+wp-cli.local.yml
+
+# System
+.DS_Store

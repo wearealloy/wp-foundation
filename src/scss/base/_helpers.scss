@@ -1,0 +1,92 @@
+.no-js:not(html) {
+  display: none !important;
+}
+
+html:no-js .no-js:not(html) {
+  display: block !important;
+}
+
+.no-js-inline {
+  display: none !important;
+}
+
+html.no-js .no-js-inline {
+  display: inline-block !important;
+}
+
+html.no-js .no-js-hidden {
+  display: none !important;
+}
+
+.container {
+  --max-width: var(--layout-max-width, 100%);
+  max-width: var(--max-width);
+  @include margins(false, auto, false, auto);
+  @include defaultPaddings();
+}
+
+.visually-hidden {
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.flex {
+  display: flex;
+}
+
+.block-from-lg {
+  @media (min-width: $lg) {
+    display: block;
+  }
+}
+
+.block-from-md {
+  @media (min-width: $md) {
+    display: block;
+  }
+}
+
+.hide-on-lg {
+  @media (min-width: $lg) {
+    display: none;
+  }
+}
+
+.hide-on-md {
+  @media (min-width: $md) {
+    display: none;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
